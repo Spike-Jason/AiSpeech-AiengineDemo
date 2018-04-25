@@ -1,0 +1,13 @@
+{
+    "coreProvideType": "native",
+    "app": {
+        "userId": "amy"
+    },
+    "request": {
+        "coreType":"cn.sent.syn",
+        "refText":"大家好，很高兴认识大家，我是来自思必驰科技有限公司的一名普通的程序猿",
+        "speechVolume": 80,
+        "speechRate": 1,
+        "waveTime": 1
+    }
+}

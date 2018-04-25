@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AiengineDemo整理</title>
+</head>
+<body>
+<div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="m258" id="aienginedemo整理">AiengineDemo整理</h1><p data-anchor-id="3jj9"><code>FAE</code></p><hr><div class="md-section-divider"></div><h2 data-anchor-id="r3gu" id="文件目录">文件目录</h2><p data-anchor-id="83mu">. <br>
+├── assets ---&gt;资源目录 <br>
+│&nbsp;&nbsp; ├── 0.wav ---&gt;音频资源 <br>
+│&nbsp;&nbsp; ├── 1.wav <br>
+│&nbsp;&nbsp; ├── 2.wav <br>
+│&nbsp;&nbsp; ├── aiengine-2.9.5-14806716618595ef.provision ---&gt;授权文件 <br>
+│&nbsp;&nbsp; ├── aiphonse.serialNumber ---&gt;授权生产文件 <br>
+│&nbsp;&nbsp; └── luabin.lub ---&gt;授权文件 <br>
+├── demo Demo ---&gt;目录 <br>
+│&nbsp;&nbsp; ├── asr ---&gt;识别功能 <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── asr_test.c ---&gt;识别功能程序 <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── cfg_cloud_asr.json ---&gt;<strong>云端配置</strong> <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── cfg_native_asr.json ---&gt;<strong>本地配置</strong> <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── makefile <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── param_cloud_asr.json ---&gt;云端参数 <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── param_native_asr.json ---&gt;本地参数 <br>
+│&nbsp;&nbsp; ├── auth ---&gt;认证功能 <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── auth_test.c ---&gt;认证功能程序 <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── cfg_auth.json ---&gt; <strong>认证配置</strong> <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── json <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; └── cJSON.h <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── makefile <br>
+│&nbsp;&nbsp; ├── cntts ---&gt;TTS生产功能 <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── cfg_cloud_cntts.json <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── cfg_native_cntts.json <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── cntts_test.c <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── makefile <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── param_cloud_cntts.json <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── param_native_cntts.json <br>
+│&nbsp;&nbsp; ├── gram <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── cfg_native_gram.json <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── gram_test.c <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── makefile <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── param_native_gram.json <br>
+│&nbsp;&nbsp; └── wakeup <br>
+│&nbsp;&nbsp;     ├── cfg_native_wakeup.json <br>
+│&nbsp;&nbsp;     ├── makefile <br>
+│&nbsp;&nbsp;     ├── param_native_wakeup.json <br>
+│&nbsp;&nbsp;     └── wakeup_test.c <br>
+├── inc <br>
+│&nbsp;&nbsp; └── aiengine.h ---&gt;头文件 <br>
+├── lib <br>
+│&nbsp;&nbsp; ├── libaiengine-127-linux-2.9.5-20180109140817.so ---&gt;语音库 <br>
+│&nbsp;&nbsp; ├── libcjson.so ---&gt;JSON库 <br>
+│&nbsp;&nbsp; └── libcjson_utils.so ---&gt;JSON库 <br>
+├── makefile ---&gt;<strong>主makefile</strong> <br>
+├── res ---&gt;数据资源 <br>
+│&nbsp;&nbsp; ├── asr <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── ebnfr.aicar.0.0.11.4.bin ---&gt;本地识别库文件 <br>
+│&nbsp;&nbsp; ├── cntts <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── aitts_sent_dict_v3.15.db ---&gt;本地TTS数据库 <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── zhilingf.v1.5.1.bin ---&gt;本地TTS语音资源 <br>
+│&nbsp;&nbsp; ├── gram <br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── ebnfc.aicar.0.0.11.4.bin ---&gt;本地语法编译库 <br>
+│&nbsp;&nbsp; └── wakeup <br>
+│&nbsp;&nbsp;     └── wakeup_aifar_comm_20180104.bin ---&gt;唤醒资源 <br>
+└── RunDemo.sh ---&gt;<strong>运行文件</strong></p><hr><div class="md-section-divider"></div><h2 data-anchor-id="fzy6" id="重要文件说明">重要文件说明</h2><div class="md-section-divider"></div><h3 data-anchor-id="cyv5" id="cfgxxxxxxjson-配置文件">cfg_xxx_xxx.json 配置文件</h3><pre data-anchor-id="ybqg"><code>{
+"luaPath": "/home/aiphonse/Documents/Demo/aiengine-94/assets/luabin.lub",
+"appKey": "xxx",
+"secretKey": "xxx",
+"provision": "/home/aiphonse/Documents/Demo/aiengine-94/assets/xxx.provision",
+"serialNumber": "/home/aiphonse/Documents/Demo/aiengine-94/assets/aiphonse.serialNumber",
+"prof":{
+    "enable": 1,
+    "output": "./aiengine.log"
+}
+</code></pre><p data-anchor-id="bt4q">} <br>
+JSON文件必备配置信息 <br>
+其中<strong>luaPath、provision、serialNumber</strong>都存放在<strong>assets</strong>文件夹中。使用的是<strong>绝对路径</strong>请根据自身环境进行配置。<strong>注意每一个cfg文件都要进行配置</strong> <br>
+另外<strong>appkey、secretKey为测试KEY这与provision一致，请在获取License后更换，需要保证三者一致</strong></p><div class="md-section-divider"></div><h3 data-anchor-id="b5ma" id="libaiengine-127-linux-295-20180109140817so">libaiengine-127-linux-2.9.5-20180109140817.so</h3><p data-anchor-id="okzu">该库为语音库，<strong>请在获取SO库后将其加入到lib文件夹中</strong></p><div class="md-section-divider"></div><h3 data-anchor-id="p2ad" id="主目录makefile">主目录makefile</h3><p data-anchor-id="67xm">主目录下的makefile支持全部编译和单独编译DEMO中各个功能目录，如</p><pre data-anchor-id="7ozu"><code>make auth           #单独编译auth
+make all            #编译所有功能
+make clean_all      #clean 所有功能目录
+make clean_auth     #单独clean auth目录
+</code></pre><div class="md-section-divider"></div><h3 data-anchor-id="a1rb" id="rundemosh">RunDemo.sh</h3><p data-anchor-id="1r0e">主目录下的RunDemo.sh是编译 和 运行的样例。会顺序执行  <br>
+编译所有功能--&gt;运行auth--&gt;运行ASR（云端）--&gt;运行cntts --&gt;运行Wakeup --&gt;运行gram</p><p data-anchor-id="5q9c"><strong>建议参考执行内容，单独执行云端或本地的功能</strong></p><div class="md-section-divider"></div><h3 data-anchor-id="on6i" id="单功能makefile">单功能makefile</h3><p data-anchor-id="qkk4"><strong>请按照得到的语音库，修改LIB的配置</strong></p><pre data-anchor-id="33u3"><code>../../lib/libaiengine-127-linux-2.9.5-20180109140817.so
+</code></pre><hr><div class="md-section-divider"></div><h2 data-anchor-id="rub2" id="关于配置">关于配置</h2><p data-anchor-id="h0nw">除Auth外其他每个功能中都包含param_xx_xx.json文件 <br>
+请参考开发文档<a href="http://open.aispeech.com/doc/%22%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3%22" target="_blank">参考文档</a></p></div>
+</body>
+</html>

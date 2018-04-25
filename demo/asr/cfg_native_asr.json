@@ -1,0 +1,24 @@
+{
+    "luaPath": "/home/aiphonse/Documents/Demo/aiengine-94/assets/luabin.lub",
+    "appKey": "xx",
+    "secretKey": "xx",
+    "provision": "/home/aiphonse/Documents/Demo/aiengine-94/assets/xx.provision",
+    "serialNumber": "/home/aiphonse/Documents/Demo/aiengine-94/assets/aiphonse.serialNumber",
+    "prof":{
+        "enable": 1,
+        "output": "./aiengine.log"
+    },
+    "vad":{
+        "enable": 0,
+        "res": "./res/vad/vad.aihome.v0.5.20160324.bin",
+        "sampleRate": 16000,
+        "pauseTime": 70, 
+        "strip": 2
+    },
+    "native":{
+        "cn.asr.rec":{
+            "netBinPath":"res/gram/local.net.bin",
+            "resBinPath":"res/asr/ebnfr.aicar.0.0.11.4.bin"
+        }
+    }
+}

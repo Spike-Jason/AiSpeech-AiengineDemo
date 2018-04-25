@@ -1,0 +1,24 @@
+{
+    "luaPath": "/home/aiphonse/Documents/Demo/aiengine-94/assets/luabin.lub",
+    "appKey": "xx",
+    "secretKey": "xx",
+    "provision": "/home/aiphonse/Documents/Demo/aiengine-94/assets/xx.provision",
+    "serialNumber": "/home/aiphonse/Documents/Demo/aiengine-94/assets/aiphonse.serialNumber",
+    "prof":{
+        "enable": 1,
+        "output": "./aiengine.log"
+    },
+    "upload":{
+        "enable":0,
+        "tmpdir":"/tmp/upload_dir",
+        "server":"http://log.aispeech.com/bus",
+        "wakeupEnable":1,
+        "queueSize":300
+    },
+    "native":{
+        "cn.wakeup":{
+             "resBinPath": "../../res/wakeup/wakeup_aifar_comm_20180104.bin",
+             "useOutputBoundary": 0
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "luaPath": "/home/aiphonse/Documents/Demo/aiengine-94/assets/luabin.lub",
+    "appKey": "xx",
+    "secretKey": "xx",
+    "provision": "/home/aiphonse/Documents/Demo/aiengine-94/assets/xx.provision",
+    "serialNumber": "/home/aiphonse/Documents/Demo/aiengine-94/assets/aiphonse.serialNumber",
+    "prof":{
+        "enable": 1,
+        "output": "./aiengine.log"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "coreProvideType": "native",
+    "vadEnable": 0,
+    "audio":{
+        "audioType": "wav",
+        "channel": 1,
+        "sampleBytes": 2,
+        "sampleRate": 16000,
+        "compress": "speex"
+    },
+    "app":{
+        "userId": "amy"
+    },
+    "request":{
+        "coreType": "cn.gram",
+        "outputPath": "res/gram/local.net.bin",
+		"ebnf": "$DIGIT = (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0);
+				$NUM = ($DIGIT/min=1,max=11,k=\"number\"/);
+				$PERSON = ((小明|小华|小金)/k=\"person\"/);
+                $NAME = (小乐);
+				$PHONE_ACTION = (打[电话]给 | 电话给 | 呼叫 | 联系 | 致电 | 拨通 | 拨打)/action=\"call\"/;
+                $CMD = $NAME;
+				( \\<s\\> ($CMD) \\<\\/s\\> )
+                "
+		}
+}

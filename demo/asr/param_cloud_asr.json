@@ -1,0 +1,17 @@
+{
+    "coreProvideType": "cloud",
+    "audio": {
+        "audioType": "wav",
+        "channel": 1,
+        "sampleBytes": 2,
+        "sampleRate": 16000,
+        "compress": "speex"
+    },
+    "app": {
+        "userId": "amy"
+    },
+    "request": {
+        "coreType": "cn.asr.rec",
+        "res":"aicar"
+    }
+}

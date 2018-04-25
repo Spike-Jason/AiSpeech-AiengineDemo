@@ -1,0 +1,10 @@
+{
+    "coreProvideType": "native",
+    "app": {
+        "userId": "aispeech"
+    },
+    "request": {
+        "coreType": "cn.wakeup",
+        "env": "words=da kai kong qi jin hua qi,xiao le ni hao;thresh=0.1,0.1;"
+    }
+}

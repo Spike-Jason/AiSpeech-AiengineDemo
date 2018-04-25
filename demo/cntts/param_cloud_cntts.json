@@ -1,0 +1,21 @@
+{
+    "coreProvideType": "cloud",
+    "audio": {
+        "audioType": "mp3",
+        "channel": 1,
+        "sampleBytes": 2,
+        "sampleRate": 16000,
+        "compress": "raw"
+    },
+    "app": {
+        "userId": "amy"
+    },
+    "request": {
+        "coreType": "cn.sent.syn",
+        "res": "syn_chnsnt_qianranf",
+        "refText": "刘德华 ，MH，JP，香港著名演员兼歌手，1990年代获封香港乐坛「四大天王」之一",
+        "speechRate": 1,
+        "speechVolume": 50,
+        "useStream": 1
+    }
+}
